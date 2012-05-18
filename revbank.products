@@ -1,0 +1,32 @@
+# After updating this file, please do run:
+#     git commit revbank.products -m products
+#     git push
+
+
+# Empty lines and lines beginning with # are ignored.
+
+# All other lines should have three fields, whitespace separated. The first two
+# fields are barcode/productID and price, the third field is the description.
+# Only the last field may have whitespace.
+
+# Free stuff
+649241869825    0.00    Free disgusting stuff (LS)
+57063003        0.00    Free Stimorol
+
+# Drinks
+5410228142027   1.00    Jupiler
+4029764001807   1.50    Club maté 0,5l
+5411681014005   1.50    Duvel
+8712566387014   1.00    Ice Tea 
+5449000000996   1.00    Coka Cola
+5449000131805   1.00    Coka Cola Zero
+8722700696599   1.00    Ice Tea Zero
+5400141053364   1.00	water 50cl
+5449000011527   1.00    Fanta orange
+90494024        1.00    Minute Made Orange
+4029764001814   1.50    Club Mate iceT
+
+#foods
+5000159407397   0.50   Snickers
+5000159407236   0.50   Mars
+  
