@@ -39,7 +39,7 @@ $readline->ornaments('me,md,,');
 # For tab completion
 my @commands = qw/
     help wtf omgwtfbbq examples deposit take steal give undo
-    list ls edit restart shame
+    list ls edit restart shame exit
 /;
 
 sub prompt {
@@ -92,6 +92,7 @@ Valid commands:
     abort                           Abort the current transaction
     edit                            Edit product list
     restart                         Attempt to restart the revbank shell
+    exit			    Exit the program
 END
     return ['noop'];
 }
@@ -125,7 +126,8 @@ sub now {
 
 sub git_commit {
     my ($message) = @_;
-    system qw(git commit -q revbank.accounts .revbank.undo), -m => $message;
+    #/system qw(git commit -q revbank.accounts .revbank.undo), -m => $message;
+    system qw(git commit -q revbank.accounts), -m => $message;
     system 'git push >/dev/null 2>&1';
 }
 
@@ -248,6 +250,8 @@ sub parse_command {
     } elsif ($command =~ /^(?:restart)$/i) {
         exec $0;
         die "exec() failed. You'll have to restart revbank yourself :P\n";
+    } elsif ($command =~ /^(?:exit)$/i) {
+        exit;
     }
     return;
 }
@@ -515,7 +519,7 @@ LINE: for (;;) {
                         "Add new account for user '$element'? ",
                         [ qw/yes no/ ]  # tab completion ;)
                     );
-                    if ($yesno =~ /^(?:y|yes)$/) {
+                    if ($yesno =~ /^(?:y|yes|zes)$/) {
                         create_account($element);
                         $user = $element;
                         next ELEMENT;
