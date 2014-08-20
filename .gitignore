@@ -1,0 +1,13 @@
+RevBank
+.bash_history
+.bash_logout
+.bashrc
+.cpan
+.profile
+.revbank.log
+.revbank.undo
+README.pod
+plugins
+revbank.market
+revbank.plugins
+
