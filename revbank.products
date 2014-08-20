@@ -1,9 +1,7 @@
-# After updating this file, please do run:
-#     git commit revbank.products -m products
-#     git push
+# After updating this file, wait 12 minutes max for
+# the updated file to be pushed to the online repo 
 
-
-# Empty lines and lines beginning with # are ignored.
+#Empty lines and lines beginning with # are ignored.
 
 # All other lines should have three fields, whitespace separated. The first two
 # fields are barcode/productID and price, the third field is the description.
